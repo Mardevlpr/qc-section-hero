@@ -1,0 +1,106 @@
+/*
+Theme Name:     Qualigiène Consulting
+Date:  2024
+*/
+@media (min-width: 1161px) { 
+    .l-site-main-nav #mainMenu .js-panel .l-main-nav-alt-link.ico-booking::before {
+        font-size: 2.1rem;
+    }
+}
+.carousel-container .box-container {
+    background-image: url('../images/hero_wallpaper_full.jpg'); background-size: 100%; background-position: cover; background-repeat: no-repeat;margin-top: 6em; 
+}
+.carousel-container .box-container .box-left {
+    background-image: url('../images/hero_img_parachute.jpg'); background-repeat: no-repeat; background-size: cover; width: 600px; height: 100%; margin-left: 9rem; padding:2rem 0rem 4rem 3rem; opacity: 0.84;
+}
+.carousel-container .box-container .box-left .big-title h2 {
+    font-size: 2.7rem; color: #ffffff; font-family: "Montserrat", sans-serif; text-align: left; padding-top:3rem;
+}
+.carousel-container .box-container .box-left .big-paragraph p {
+    font-size:19px; color:#ffffff; font-family:"Nunito", sans-serif; font-weight: 300; text-align: left; margin-top: 7rem; margin-bottom: 2rem;
+}
+.carousel-container .box-container .box-left .btn-cta a {
+    font-size: 19px; color:#ffffff; font-family: "Nunito", sans-serif; font-weight:300; text-decoration: none;
+}
+.carousel-container .box-container .box-left .btn-cta button {
+    background-color: #6284bf; border: 2px solid #6284bf; padding: 13px; cursor: pointer;  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.carousel-container .box-container .box-left .btn-cta button:hover {
+    background-color: #ffffff; 
+}
+.carousel-container .box-container .box-left .btn-cta button:hover a {
+    color:#6284bf;
+}
+.carousel-container .box-container .boxes-flex .col-item{
+    background-color: #f2f2f2; border-radius: 3px; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 230px; max-width: 230px; padding: 1.5em; height: max-content;
+}
+.carousel-container .box-container .boxes-flex .col-item .title{
+    font-family: "Nunito", sans-serif; font-size: 13px;
+}
+.carousel-container .box-container .col-item .content ul {
+    margin: 0.5em 0; padding: 0em 1em 0 1.5em; display: none; 
+}
+.carousel-container .box-container .col-item .content ul.show{
+    display: block;
+}
+.carousel-container .box-container .col-item .content ul li {
+    margin: 5px 0; font-size: 1em; font-family: "Nunito", sans-serif; font-weight: 200;
+}
+.carousel-container .box-container .col-item .btn-more button{
+    font-family: "Nunito", sans-serif; font-size: 1.1em; border: none; color: #6284bf; font-weight: 500; background-color: #f2f2f2; margin-top: 36px; margin-bottom: 36px; display: inline-block; position: relative;
+}
+.carousel-container .box-container .col-item .btn-more button::after{
+    content: ''; position: absolute; width: 100%; height: 1px; background-color: #6284bf; bottom: -12px; left: 0;transform: scaleX(0);  transform-origin: bottom center; transition: transform 0.25s ease-out; 
+}
+.carousel-container .box-container .col-item .btn-more button:hover::after {
+    transform: scaleX(1); 
+}
+.carousel-container .box-container .col-item .btn-more button:hover{
+    cursor: pointer;
+}
+.carousel-container .box-container {
+    display: flex;
+}
+.carousel-container .box-container .boxes-flex {
+    display: grid; margin: 100px 60px 60px -90px; z-index: 2; grid-template-columns: repeat(2, auto);grid-template-rows: repeat(2, auto); gap:20px; max-height: 580px; 
+}
+
+
+@media (max-width: 767px) { 
+    .carousel-container .box-container{
+        background:none; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 100px;
+    }
+    .carousel-container .box-container .box-left {
+        width:100%; height: 410px; margin: 0; padding: 0; text-align: center;
+    }
+    .carousel-container .box-container .box-left .big-title h2 {
+        font-size: 2em; text-align: center; padding:0.2em;
+    }    
+    .carousel-container .box-container .box-left .big-title h2 br {
+        display:none;
+    }
+    .carousel-container .box-container .box-left .big-paragraph p{
+        font-size: 18px; margin:50px 20px; padding:15px; border-radius: 2px; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); margin-bottom: 20px;
+    }
+    .carousel-container .box-container .box-left .big-paragraph p br {
+        display: none;
+    }
+    .carousel-container .box-container .box-left .btn-cta button a {
+        font-size:18px; 
+    }
+    .carousel-container .box-container .boxes-flex .col-item {
+        width: 320px; max-width: 320px; padding: 10px 20px 20px 20px;
+    }
+    .carousel-container .box-container .boxes-flex {
+        margin: -25px 4px 3em 4px; grid-template-columns: repeat(1, auto);grid-template-rows: repeat(4, auto);
+    }
+    .carousel-container .box-container .boxes-flex .col-item .title{
+        font-size: 14px;
+    }
+    .carousel-container .box-container .col-item .btn-more button{
+        margin-top: 0px; margin-bottom: 0px; padding-top: 20px; padding-bottom: 20px; text-decoration: underline; text-underline-offset: 20px; font-size: 15px;
+    }
+    .carousel-container .box-container .col-item .btn-more button::after{
+        display: none;
+    }
+}

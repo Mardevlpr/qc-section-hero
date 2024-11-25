@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>QC test</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+       <!-- #PAGE VIDEO Slider -->
+        <div class="carousel-container">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">                            
+                    <div class="box-container">
+                        <div class="box-left">
+                            <div class="big-title">
+                                <h2>Explorez nos <br>missions AMO</h2>
+                            </div>
+                            <div class="big-paragraph">
+                                <p>Qualigiène accompagne votre <br>entreprise dans l'optimisation de ses <br>performances sur ses marchés de <br>propreté.</p>
+                            </div>
+                            <div class="btn-cta">
+                                <button><a href="https://www.qualigiene.fr/contactez-qualigiene/#rdvForm">Rencontrer un expert</a></button>
+                            </div>
+                        </div>
+                        <div class="boxes-flex">
+                            <div class="col-item">
+                                <div class="title">
+                                    <h2>Gestion Appels d’Offres</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>Audit de l’existant</li>
+                                        <li>Dossier de Consultation</li>
+                                        <li>Adaptation des prestations suivant enveloppe budgétaire</li>
+                                        <li>Optimisation qualitative et financière</li>
+                                        <li>Analyses & Soutenances</li>                                    
+                                    </ul>
+                                </div>
+                                <div class="btn-more">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                            <div class="col-item">
+                                <div class="title">
+                                    <h2>Analyses & Soutenances</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>Analyses technique, organisationnelle, financière et qualitative des dossiers</li>
+                                        <li>Vérification des enjeux RSE, Economie Circulaire, CSR</li>
+                                        <li>Rapport d’analyses</li>
+                                        <li>Assistance aux achats dans les soutenances</li>                            </ul>
+                                </div>
+                                <div class="btn-more">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                            <div class="col-item">
+                                <div class="title">
+                                    <h2>Pilotage d’Exploitation</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>                               
+                                        <li>Contrôle qualité nettoyage</li>
+                                        <li>Suivi des plans d’actions</li>
+                                        <li>Reporting et suivi des KPIs</li>
+                                        <li>Conseil et assistance</li>
+                                    </ul>
+                                </div>
+                                <div class="btn-more">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                            <div class="col-item">
+                                <div class="title">
+                                    <h2>Relation Fournisseurs</h2>
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>Pilotage des réunions tripartites</li>
+                                        <li>Gestion des avenants</li>
+                                        <li>Suivi et vérification des factures (option)</li>                                                                                  
+                                    </ul>
+                                </div>
+                                <div class="btn-more">
+                                    <button>En savoir plus</button>
+                                </div>
+                            </div>
+                            <div class="col-icone">
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.btn-more button').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const colItem = button.closest('.col-item');
+                    const content = colItem.querySelector('.content ul');
+                    const isExpanded = button.classList.contains('expanded');
+
+                    // Fermer les autres col-item avant d'en ouvrir un nouveau
+                    const allColItems = document.querySelectorAll('.col-item');
+                    allColItems.forEach((item) => {
+                        if (item !== colItem) {
+                            item.querySelector('.content ul').classList.remove('show');
+                            item.querySelector('.btn-more button').textContent = 'En savoir plus';
+                            item.style.maxHeight = '350px'; // Retour à la hauteur initiale
+                            item.querySelector('.btn-more button').classList.remove('expanded');
+                        }
+                    });
+
+                    // Toggle du col-item ouvert
+                    if (isExpanded) {
+                        content.classList.remove('show');
+                        button.textContent = 'En savoir plus';
+                        colItem.style.maxHeight = '350px'; // Retour à la hauteur initiale
+                    } else {
+                        content.classList.add('show');
+                        button.textContent = 'Afficher moins';
+                        colItem.style.maxHeight = '500px'; // Augmente la hauteur uniquement de l'élément cliqué
+                    }
+
+                    button.classList.toggle('expanded');
+                });
+            });
+        });
+        </script>
+<!-- #PAGE VIDEO Slider -->
+    </body>
+</html>
